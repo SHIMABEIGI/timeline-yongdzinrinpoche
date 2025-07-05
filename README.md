@@ -1,1 +1,1 @@
-# timeline-yongdzinrinpoche
+# The Timeline of H.E. Yongdzin Rinpoche Life
