@@ -528,23 +528,13 @@
         "text": "During the 100th year ceremony"
       }
     },
-     {
-    "start_date": {
-      "year": "2025"
-    },
-    "text": {
-      "headline": "Enters Thukdam and Parinirvana",
-      "text": "Passed away peacefully on June 12 during Saga Dawa"
+  "start_date": {
+        "year": "2025"
+      },
+      "text": {
+        "headline": "Enters Thukdam and Parinirvana",
+        "text": "Passed away peacefully on June 12 during Saga Dawa"
+      }
     }
-  },
-  {
-    "start_date": {
-      "year": "2099"
-    },
-    "text": {
-      "headline": "🧪 Test: Layered Photo Reveal",
-      "text": "This is a test of the image reveal.<br><br><div class='layered-photo'><div class='layer layer-back'></div><div class='layer layer-middle'></div><div class='layer layer-front'></div></div>"
-    },
-    "group": "Testing"
   ]
 }
