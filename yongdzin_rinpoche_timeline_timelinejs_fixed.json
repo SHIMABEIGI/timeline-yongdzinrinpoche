@@ -498,7 +498,7 @@
       },
       "text": {
         "headline": "Celebrates 95th Birthday with Devotees",
-        "text": "Joined by housands of devotees from various countries of the East and West"
+        "text": "Joined by Thousands of devotees from various countries of the East and West"
       }
     },
     {
@@ -528,7 +528,17 @@
         "text": "During the 100th year ceremony"
       }
     },
-  "start_date": {
+    {
+      "start_date": {
+        "year": 2025
+      },
+      "text": {
+        "headline": "100th Birthday Celebration",
+        "text": "Centennial celebrated with 6000 devotees"
+      }
+    },
+    {
+      "start_date": {
         "year": "2025"
       },
       "text": {
