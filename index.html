@@ -9,31 +9,20 @@
         margin: 0;
         padding: 0;
       }
-
       #timeline-embed {
         width: 100%;
         height: 100vh;
       }
-
-      /* Watermark logo background behind content area */
-      .tl-story-content {
-        background-image: url('https://shimabeigi.github.io/timeline-yongdzinrinpoche/Bon.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 250px;
-        opacity: 1;
-      }
-
-      /* Optional: semi-transparent background behind the actual text */
-      .tl-slide .tl-text {
-        background-color: rgba(255, 255, 255, 0.85);
-        z-index: 10;
-      }
     </style>
   </head>
   <body>
+    <!-- LOGO -->
+    <img src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
+         alt="Bon Logo"
+         style="position: fixed; top: 20px; left: 20px; width: 100px; z-index: 999;">
+    
+    <!-- TIMELINE -->
     <div id="timeline-embed"></div>
-
     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
     <script>
       window.timeline = new TL.Timeline(
