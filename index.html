@@ -29,11 +29,12 @@
         pointer-events: none;
       }
 
-      /* Make description image smaller */
-      .tl-text .tl-media img {
-        max-width: 140px !important; /* Smaller image than before */
+      /* Force image in timeline title section to be smaller */
+      .tl-slide .tl-text-content img {
+        max-width: 140px !important;
         height: auto !important;
-        margin-bottom: 10px;
+        display: block;
+        margin: 0 auto 10px auto;
       }
 
       /* Adjust headline text */
@@ -51,10 +52,6 @@
 
       /* Responsive for smaller screens */
       @media (max-width: 768px) {
-        .tl-text .tl-media img {
-          max-width: 90% !important;
-        }
-
         .tl-text .tl-headline,
         .tl-text .tl-headline-title {
           font-size: 16px !important;
@@ -62,6 +59,10 @@
 
         .tl-text .tl-text-content p {
           font-size: 12px !important;
+        }
+
+        .tl-slide .tl-text-content img {
+          max-width: 90% !important;
         }
       }
     </style>
