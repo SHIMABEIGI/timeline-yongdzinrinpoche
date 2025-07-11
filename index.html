@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Yongdzin Rinpoche Timeline</title>
@@ -18,13 +18,12 @@
         box-sizing: border-box;
       }
 
-      /* Centered Logo Styling */
       .logo {
         position: fixed;
         top: 20px;
         left: 50%;
         transform: translateX(-50%);
-        width: 80px;
+        width: 80px; /* Smaller logo */
         z-index: 999;
         pointer-events: none;
       }
@@ -50,52 +49,41 @@
         line-height: 1.5em;
       }
 
-      /* Restore timeline year ruler */
-      .tl-timeaxis .tl-timeaxis-tick-text {
-        font-size: 12px !important;
-        color: #333 !important;
-        font-weight: 500 !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
-
-      .tl-timeaxis .tick {
-        stroke: #999 !important;
-        stroke-width: 1px !important;
-      }
-
-      /* Responsive for smaller screens */
       @media (max-width: 768px) {
+        .tl-slide .tl-text-content img {
+          max-width: 90% !important;
+        }
         .tl-text .tl-headline,
         .tl-text .tl-headline-title {
           font-size: 16px !important;
         }
-
         .tl-text .tl-text-content p {
           font-size: 12px !important;
-        }
-
-        .tl-slide .tl-text-content img {
-          max-width: 90% !important;
         }
       }
     </style>
   </head>
   <body>
-    <!-- LOGO -->
+    <!-- Logo -->
     <img
       src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
       alt="Bon Logo"
       class="logo"
     />
 
-    <!-- TIMELINE -->
+    <!-- Timeline -->
     <div id="timeline-embed"></div>
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js?v=3.8.8"></script>
     <script>
       window.timeline = new TL.Timeline(
         'timeline-embed',
-        'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
+        'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json',
+        {
+          timenav_position: "bottom",
+          start_at_slide: 0,
+          initial_zoom: 3
+        }
       );
     </script>
   </body>
