@@ -1,90 +1,87 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Yongdzin Rinpoche Timeline</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Helvetica Neue', sans-serif;
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yongdzin Rinpoche Timeline</title>
+  <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    #timeline-embed {
+      width: 100%;
+      height: 100vh;
+      padding-top: 100px; /* Push content below logo */
+      box-sizing: border-box;
+    }
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      z-index: 999;
+      pointer-events: none;
+    }
+    /* Make event images smaller */
+    .tl-slide .tl-text-content img,
+    .tl-text .tl-media img {
+      max-width: 160px !important;
+      height: auto !important;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    /* Shorter titles */
+    .tl-text .tl-headline,
+    .tl-text .tl-headline-title {
+      font-size: 18px !important;
+      line-height: 1.2em;
+    }
+    /* Adjust paragraph font */
+    .tl-text .tl-text-content p {
+      font-size: 14px !important;
+      line-height: 1.5em;
+    }
+    /* Ensure years / dates are visible */
+    .tl-headline .tl-date {
+      color: #666;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+    }
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      .tl-slide .tl-text-content img,
+      .tl-text .tl-media img {
+        max-width: 90% !important;
       }
-
-      #timeline-embed {
-        width: 100%;
-        height: 100vh;
-        padding-top: 70px; /* Reduced top padding for Squarespace iframe */
-        box-sizing: border-box;
-      }
-
-      /* Smaller centered logo */
-      .logo {
-        position: fixed;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px; /* Smaller logo size */
-        height: auto;
-        z-index: 999;
-        pointer-events: none;
-      }
-
-      /* Force image in timeline title section to be smaller */
-      .tl-slide .tl-text-content img {
-        max-width: 140px !important;
-        height: auto !important;
-        display: block;
-        margin: 0 auto 10px auto;
-      }
-
-      /* Adjust headline text */
       .tl-text .tl-headline,
       .tl-text .tl-headline-title {
-        font-size: 20px !important;
-        line-height: 1.2em;
+        font-size: 16px !important;
       }
-
-      /* Adjust paragraph text */
       .tl-text .tl-text-content p {
-        font-size: 14px !important;
-        line-height: 1.5em;
+        font-size: 12px !important;
       }
-
-      /* Responsive for smaller screens */
-      @media (max-width: 768px) {
-        .tl-text .tl-headline,
-        .tl-text .tl-headline-title {
-          font-size: 16px !important;
-        }
-
-        .tl-text .tl-text-content p {
-          font-size: 12px !important;
-        }
-
-        .tl-slide .tl-text-content img {
-          max-width: 90% !important;
-        }
+      .logo {
+        width: 50px;
+        top: 15px;
       }
-    </style>
-  </head>
-  <body>
-    <!-- LOGO -->
-    <img
-      src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
-      alt="Bon Logo"
-      class="logo"
-    />
+    }
+  </style>
+</head>
+<body>
+  <!-- Bon logo -->
+  <img src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png" alt="Bon Logo" class="logo" />
 
-    <!-- TIMELINE -->
-    <div id="timeline-embed"></div>
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-    <script>
-      window.timeline = new TL.Timeline(
-        'timeline-embed',
-        'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
-      );
-    </script>
-  </body>
+  <!-- Timeline embed -->
+  <div id="timeline-embed"></div>
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script>
+    window.timeline = new TL.Timeline(
+      'timeline-embed',
+      'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
+    );
+  </script>
+</body>
 </html>
