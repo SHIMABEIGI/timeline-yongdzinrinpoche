@@ -1,88 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Yongdzin Rinpoche Timeline</title>
-    <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Rinpoche Timeline</title>
+  <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
+  <style>
+    body { margin:0; padding:0; font-family: sans-serif; line-height:1.6; }
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      z-index: 999;
+    }
+    .intro {
+      max-width: 800px;
+      margin: 100px auto 20px;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    #timeline-embed {
+      width: 100%;
+      height: 90vh;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
 
-      #timeline-embed {
-        width: 100%;
-        height: 100vh;
-        padding-top: 100px; /* Prevents overlap with logo */
-        box-sizing: border-box;
-      }
+  <!-- Logo (centered, larger) -->
+  <img src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
+       alt="Bön Logo" class="logo">
 
-      /* Centered Logo Styling */
-      .logo {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px; /* Smaller logo */
-        z-index: 999;
-        pointer-events: none;
-      }
+  <!-- Intro Section -->
+  <section class="intro">
+    <p>This interactive timeline honors the life and legacy of His Eminence Yongdzin Lopön Tenzin Namdak Rinpoche—one of the great masters of the Yungdrung Bön tradition. It highlights key milestones of a life devoted to wisdom, service, and preserving an ancient spiritual lineage. Created for a digital audience, developed by Shima Beigi under the guidance of Khenchen Tenpa Yungdrung Rinpoche, and reviewed for authenticity, this living timeline invites you to reflect, learn, and draw inspiration from a master whose life itself was a profound teaching.</p>
+  </section>
 
-      /* Force image in timeline title section to be smaller */
-      .tl-slide .tl-text-content img {
-        max-width: 140px !important;
-        height: auto !important;
-        display: block;
-        margin: 0 auto 10px auto;
-      }
+  <!-- Timeline Embed -->
+  <div id="timeline-embed"></div>
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script>
+    window.timeline = new TL.Timeline(
+      'timeline-embed',
+      'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
+    );
+  </script>
 
-      /* Adjust headline text */
-      .tl-text .tl-headline,
-      .tl-text .tl-headline-title {
-        font-size: 20px !important; /* Smaller title */
-        line-height: 1.2em;
-      }
-
-      /* Adjust paragraph text */
-      .tl-text .tl-text-content p {
-        font-size: 14px !important;
-        line-height: 1.5em;
-      }
-
-      /* Responsive for smaller screens */
-      @media (max-width: 768px) {
-        .tl-text .tl-headline,
-        .tl-text .tl-headline-title {
-          font-size: 16px !important;
-        }
-
-        .tl-text .tl-text-content p {
-          font-size: 12px !important;
-        }
-
-        .tl-slide .tl-text-content img {
-          max-width: 90% !important;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- LOGO -->
-    <img
-      src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
-      alt="Bon Logo"
-      class="logo"
-    />
-
-    <!-- TIMELINE -->
-    <div id="timeline-embed"></div>
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-    <script>
-      window.timeline = new TL.Timeline(
-        'timeline-embed',
-        'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
-      );
-    </script>
-  </body>
+</body>
 </html>
