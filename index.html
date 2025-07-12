@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Yongdzin Rinpoche Timeline</title>
-    <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background-color: #fff;
-        color: #222;
+<head>
+  <meta charset="UTF-8" />
+  <title>Yongdzin Rinpoche Timeline</title>
+  <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    #timeline-embed {
+      width: 100%;
+      height: 100vh;
+      padding-top: 100px; /* Ensures logo doesn't overlap */
+      box-sizing: border-box;
+    }
+
+    /* Centered logo */
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px; /* Adjust logo size */
+      z-index: 999;
+      pointer-events: none; /* Prevent click interference */
+    }
+
+    /* Resize images inside timeline text slides */
+    .tl-slide .tl-text-content img {
+      max-width: 140px !important;
+      height: auto !important;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+    /* Adjust headline text size */
+    .tl-text .tl-headline,
+    .tl-text .tl-headline-title {
+      font-size: 20px !important;
+      line-height: 1.2em;
+    }
+
+    /* Adjust paragraph text size */
+    .tl-text .tl-text-content p {
+      font-size: 14px !important;
+      line-height: 1.5em;
+    }
+
+    /* Responsive tweaks for smaller devices */
+    @media (max-width: 768px) {
+      .tl-text .tl-headline,
+      .tl-text .tl-headline-title {
+        font-size: 16px !important;
       }
 
-      #timeline-embed {
-        width: 100%;
-        height: 100vh;
+      .tl-text .tl-text-content p {
+        font-size: 12px !important;
       }
 
-      .logo {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 120px;
-        z-index: 999;
+      .tl-slide .tl-text-content img {
+        max-width: 90% !important;
       }
+    }
+  </style>
+</head>
+<body>
+  <!-- LOGO -->
+  <img
+    src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
+    alt="Bon Logo"
+    class="logo"
+  />
 
-      .intro-text {
-        max-width: 900px;
-        margin: 160px auto 60px;
-        padding: 0 20px;
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      @media (max-width: 768px) {
-        .logo {
-          width: 90px;
-          top: 15px;
-        }
-
-        .intro-text {
-          margin-top: 140px;
-          font-size: 15px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- LOGO -->
-    <img
-      src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
-      alt="Bon Logo"
-      class="logo"
-    />
-
-    <!-- INTRO TEXT (will be hidden after load) -->
-    <div class="intro-text" id="intro">
-      <p>
-        This interactive and evolving timeline offers a carefully curated introduction to the landmark journey of His Eminence Yongdzin Lopön Tenzin Namdak Rinpoche — a revered master and one of the most influential figures in the Yungdrung Bön tradition.
-        Tracing the arc of his spiritual path illuminates the key milestones of a life dedicated to wisdom, service, and the preservation of one of the world’s oldest spiritual lineages.
-        This timeline is part of a broader initiative conceived and built by Shima Beigi, under the guidance of Khenchen Tenpa Yungdrung Rinpoche, the abbot of Triten Norbutse Monastery.
-        The information has been carefully reviewed by Khenchen Rinpoche to ensure authenticity and integrity.
-      </p>
-    </div>
-
-    <!-- TIMELINE -->
-    <div id="timeline-embed"></div>
-
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-    <script>
-      // Load the timeline
-      window.timeline = new TL.Timeline(
-        'timeline-embed',
-        'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
-      );
-
-      // Hide intro after 5 seconds (optional)
-      setTimeout(() => {
-        document.getElementById('intro').classList.add('hidden');
-      }, 5000);
-    </script>
-  </body>
+  <!-- TIMELINE -->
+  <div id="timeline-embed"></div>
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script>
+    window.timeline = new TL.Timeline(
+      'timeline-embed',
+      'https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/yongdzin_rinpoche_timeline_timelinejs_fixed.json'
+    );
+  </script>
+</body>
 </html>
