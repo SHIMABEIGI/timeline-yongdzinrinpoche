@@ -13,11 +13,11 @@
 
     #timeline-embed {
       width: 100%;
-      height: 100vh;
+      height: calc(100vh - 100px); /* Add space to account for logo */
+      padding-top: 100px;           /* Push timeline content down */
+      box-sizing: border-box;
       position: relative;
       z-index: 1;
-      padding-top: 80px; /* 🟡 Add top space here */
-      box-sizing: border-box;
     }
 
     .logo {
@@ -72,6 +72,7 @@
   />
 
   <div id="timeline-embed"></div>
+
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script>
     window.timeline = new TL.Timeline(
