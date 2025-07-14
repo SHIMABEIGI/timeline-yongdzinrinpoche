@@ -16,7 +16,7 @@
       height: 100vh;
       position: relative;
       z-index: 1;
-      padding-top: 80px; /* 🟡 Extra space at the top for the logo */
+      padding-top: 80px; /* 🟡 Add top space here */
       box-sizing: border-box;
     }
 
@@ -30,7 +30,6 @@
       pointer-events: none;
     }
 
-    /* Make image inside timeline smaller */
     .tl-slide .tl-text-content img {
       max-width: 140px !important;
       height: auto !important;
@@ -38,21 +37,17 @@
       margin: 0 auto 10px auto;
     }
 
-    /* Reduce spacing between title and paragraph */
     .tl-text .tl-headline,
     .tl-text .tl-headline-title {
       font-size: 20px !important;
       line-height: 1.2em;
-      margin-bottom: 5px !important; /* 🔽 Reduce space under headline */
     }
 
     .tl-text .tl-text-content p {
       font-size: 14px !important;
       line-height: 1.5em;
-      margin-top: 0 !important; /* 🔼 Remove space above paragraph */
     }
 
-    /* Responsive tweaks */
     @media (max-width: 768px) {
       .tl-text .tl-headline,
       .tl-text .tl-headline-title {
@@ -70,14 +65,12 @@
   </style>
 </head>
 <body>
-  <!-- Logo -->
   <img
     src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
     alt="Bon Logo"
     class="logo"
   />
 
-  <!-- Timeline -->
   <div id="timeline-embed"></div>
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script>
