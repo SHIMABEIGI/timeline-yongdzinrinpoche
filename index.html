@@ -13,10 +13,10 @@
 
     #timeline-embed {
       width: 100%;
-      height: calc(100vh - 80px); /* Adjust height to allow for logo space */
+      height: 100vh;
       position: relative;
       z-index: 1;
-      padding-top: 80px;
+      padding-top: 80px; /* 🟡 Add top space here */
       box-sizing: border-box;
     }
 
@@ -65,14 +65,12 @@
   </style>
 </head>
 <body>
-  <!-- Logo at the top center -->
   <img
     src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
     alt="Bon Logo"
     class="logo"
   />
 
-  <!-- Timeline Embed -->
   <div id="timeline-embed"></div>
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script>
