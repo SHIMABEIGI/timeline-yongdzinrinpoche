@@ -13,15 +13,13 @@
 
     #timeline-embed {
       width: 100%;
-      height: calc(100vh - 100px); /* Add space to account for logo */
-      padding-top: 100px;           /* Push timeline content down */
-      box-sizing: border-box;
+      height: 100vh;
       position: relative;
       z-index: 1;
     }
 
     .logo {
-      position: fixed;
+      position: absolute; /* changed from fixed to avoid overlaying timeline UI */
       top: 10px;
       left: 50%;
       transform: translateX(-50%);
@@ -30,6 +28,7 @@
       pointer-events: none;
     }
 
+    /* Image inside timeline content */
     .tl-slide .tl-text-content img {
       max-width: 140px !important;
       height: auto !important;
@@ -37,17 +36,21 @@
       margin: 0 auto 10px auto;
     }
 
+    /* Title styling */
     .tl-text .tl-headline,
     .tl-text .tl-headline-title {
       font-size: 20px !important;
       line-height: 1.2em;
+      margin-bottom: 5px !important; /* move title closer to text */
     }
 
+    /* Paragraph text */
     .tl-text .tl-text-content p {
       font-size: 14px !important;
       line-height: 1.5em;
     }
 
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       .tl-text .tl-headline,
       .tl-text .tl-headline-title {
@@ -65,14 +68,18 @@
   </style>
 </head>
 <body>
+
+  <!-- LOGO -->
   <img
     src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
     alt="Bon Logo"
     class="logo"
   />
 
+  <!-- TIMELINE -->
   <div id="timeline-embed"></div>
 
+  <!-- TimelineJS Script -->
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script>
     window.timeline = new TL.Timeline(
