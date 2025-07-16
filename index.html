@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yongdzin Rinpoche Timeline</title>
   <link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Helvetica Neue', sans-serif;
+      height: 100%;
+    }
+
+    .logo-container {
+      text-align: center;
+      padding: 15px 0 5px;
+    }
+
+    .logo-container img {
+      width: 90px;
+      height: auto;
     }
 
     #timeline-embed {
       width: 100%;
-      height: 100vh;
-      position: relative;
-      z-index: 1;
+      height: 85vh;
     }
 
-    .logo {
-      position: absolute; /* changed from fixed to avoid overlaying timeline UI */
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90px;
-      z-index: 9999;
-      pointer-events: none;
-    }
-
-    /* Image inside timeline content */
     .tl-slide .tl-text-content img {
       max-width: 140px !important;
       height: auto !important;
@@ -36,21 +35,18 @@
       margin: 0 auto 10px auto;
     }
 
-    /* Title styling */
     .tl-text .tl-headline,
     .tl-text .tl-headline-title {
       font-size: 20px !important;
       line-height: 1.2em;
-      margin-bottom: 5px !important; /* move title closer to text */
+      margin-bottom: 5px !important;
     }
 
-    /* Paragraph text */
     .tl-text .tl-text-content p {
       font-size: 14px !important;
       line-height: 1.5em;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .tl-text .tl-headline,
       .tl-text .tl-headline-title {
@@ -69,17 +65,14 @@
 </head>
 <body>
 
-  <!-- LOGO -->
-  <img
-    src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
-    alt="Bon Logo"
-    class="logo"
-  />
+  <!-- Logo (not fixed, so it works in Squarespace) -->
+  <div class="logo-container">
+    <img src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png" alt="Bon Logo" />
+  </div>
 
-  <!-- TIMELINE -->
+  <!-- Timeline -->
   <div id="timeline-embed"></div>
 
-  <!-- TimelineJS Script -->
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script>
     window.timeline = new TL.Timeline(
