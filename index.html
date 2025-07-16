@@ -11,19 +11,30 @@
       padding: 0;
       font-family: 'Helvetica Neue', sans-serif;
       height: 100%;
-      overflow: hidden;
     }
 
-    .logo {
-      display: block;
-      margin: 20px auto 10px;
-      width: 80px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .logo-wrapper {
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: white;
+      z-index: 2;
+    }
+
+    .logo-wrapper img {
+      max-width: 80px;
       height: auto;
     }
 
     #timeline-embed {
+      flex: 1 1 auto;
       width: 100%;
-      height: calc(100% - 120px); /* adjust for logo height */
     }
 
     .tl-slide .tl-text-content img {
@@ -50,9 +61,11 @@
       .tl-text .tl-headline-title {
         font-size: 16px !important;
       }
+
       .tl-text .tl-text-content p {
         font-size: 12px !important;
       }
+
       .tl-slide .tl-text-content img {
         max-width: 90% !important;
       }
@@ -60,8 +73,16 @@
   </style>
 </head>
 <body>
-  <img class="logo" src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png" alt="Bon Logo" />
-  <div id="timeline-embed"></div>
+  <div class="container">
+    <div class="logo-wrapper">
+      <img
+        src="https://raw.githubusercontent.com/SHIMABEIGI/timeline-yongdzinrinpoche/main/Bon.png"
+        alt="Bon Logo"
+      />
+    </div>
+
+    <div id="timeline-embed"></div>
+  </div>
 
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script>
