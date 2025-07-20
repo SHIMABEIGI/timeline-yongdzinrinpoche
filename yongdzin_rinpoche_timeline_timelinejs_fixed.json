@@ -469,6 +469,14 @@
             }
         },
         {
+             "start_date": {
+                "year": "2015"
+            },
+            "text": {
+                "headline": "Earthquake in Nepal and Rebuilding of Triten Norbutse Monastery",
+                "text": "A devastating earthquake struck Nepal in April 2015, impacting many parts of the country including Kathmandu. About 9,000 people were killed, many thousands more were injured, and more than 600,000 structures in Kathmandu and other nearby towns were either damaged or destroyed. The Triten Norbutse Monastery complex was affected and required major rebuilding efforts. Through dedication and support, the monastery was restored and resumed its important activities for the preservation of Yungdrung Bön. On this occasion, Yongdzin Rinpoche offered extensive prayers for those whose lives were lost and affected." }
+        },
+        {
             "start_date": {
                 "year": 2017
             },
